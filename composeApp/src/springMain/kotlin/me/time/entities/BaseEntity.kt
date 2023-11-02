@@ -1,10 +1,14 @@
-/**
+/*
  * Copyright (c) 2023 Obinna Asuzu
  * This file is subject to the terms and conditions of the MIT License.
  * See the file "LICENSE" for details.
  */
 package me.time.entities
-
+/**
+ * Copyright (c) 2023 Obinna Asuzu
+ * This file is subject to the terms and conditions of the MIT License.
+ * See the file "LICENSE" for details.
+ */
 import jakarta.persistence.*
 import java.util.*
 
