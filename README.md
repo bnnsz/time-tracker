@@ -40,7 +40,7 @@ Follow these steps to get started with Time Tracker:
 
 ## Community Development Guidelines
 
-We welcome contributions from the open-source community to help improve Time Tracker. To contribute, follow these guidelines:
+I welcome contributions from the community to help improve Time Tracker. To contribute, follow these guidelines:
 
 - Fork the repository and create a new branch for your feature or bug fix.
 - Maintain a clean and consistent code style.
@@ -54,6 +54,4 @@ Time Tracker is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Support
 
-If you encounter any issues or have questions, please feel free to reach out to our [support team](mailto:support@timetrackerapp.com).
-
-Thank you for considering Time Tracker for your employee productivity monitoring needs!
+If you encounter any issues or have questions, please feel free to reach out to [Me](mailto: bnnsz384@gmail.com).
