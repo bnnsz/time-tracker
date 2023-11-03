@@ -22,18 +22,14 @@ kotlin {
     sourceSets {
         KotlinSourceSet
         val commonMain by getting {
+            val ktor_version: String by project
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
                 @OptIn(ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
-            }
-        }
 
-        val springMain by creating {
-            val ktor_version: String by project
-            dependencies {
                 implementation("org.springframework.boot:spring-boot-starter")
                 implementation("org.springframework.boot:spring-boot-starter-web")
                 implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -45,19 +41,10 @@ kotlin {
                 implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
             }
-            kotlin.srcDir("src/springMain/kotlin")
         }
 
-        idea {
-            module {
-                //log the springMain source set as a source folder in IntelliJ
-                testSources.from(file("src/springTest/kotlin"))
-                testResources.from(file("src/springTest/resources"))
-            }
-        }
-
-        val springTest by creating {
-            dependsOn(springMain)
+        val commonTest by getting {
+            dependsOn(commonMain)
             dependencies {
                 implementation("org.springframework.boot:spring-boot-starter-test")
                 implementation("org.springframework:spring-test")
@@ -77,8 +64,6 @@ kotlin {
                 implementation(compose.desktop.currentOs)
             }
             dependsOn(commonMain)
-            dependsOn(springMain)
-            dependsOn(springTest)
         }
 
 
