@@ -1,11 +1,15 @@
-/**
+/*
  * Copyright (c) 2023 Obinna Asuzu
  * This file is subject to the terms and conditions of the MIT License.
  * See the file "LICENSE" for details.
  */
-package me.time.entities
+package me.time.tracker.entities
 
-import jakarta.persistence.*
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.Temporal
+import jakarta.persistence.TemporalType
+import me.time.common.entities.BaseEntity
 import java.io.Serializable
 import java.util.*
 
@@ -15,8 +19,6 @@ import java.util.*
  */
 @Entity
 class History() : BaseEntity(), Serializable {
-    @Column
-    val employeeId: String? = null
 
     @Column
     val app: String? = null
@@ -32,9 +34,6 @@ class History() : BaseEntity(), Serializable {
 
     @Column
     val projectCode: String? = null
-
-    @Column
-    val organisationId: String? = null
 
     @Column
     val idle: Boolean? = null

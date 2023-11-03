@@ -1,0 +1,38 @@
+api:
+    auth: http://${API_HOST:localhost}:${API_PORT:9095}/authenticateUser
+    users: http://${API_HOST:localhost}:${API_PORT:9095}/api/v1/users
+    projects: http://${API_HOST:localhost}:${API_PORT:9095}/api/v1/projects
+    tasks: http://${API_HOST:localhost}:${API_PORT:9095}/api/v1/tasks
+    activities: http://${API_HOST:localhost}:${API_PORT:9095}/api/v1/activities
+authentication:
+    path: /authenticateUser
+hibernate:
+    dialect: org.hibernate.dialect.H2Dialect
+max:
+    allowed:
+        idle:
+            time:
+                sec: 60
+projects:
+    path: /projects
+publish:
+    event:
+        interval:
+            millisec: 300000
+server:
+    port: 8091
+spring:
+    datasource:
+        driver-class-name: org.h2.Driver
+        password: admin
+        url: jdbc:h2:~/time_tracker
+        username: admin
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                enable_lazy_load_no_trans: true
+tasks:
+    path: /tasks
