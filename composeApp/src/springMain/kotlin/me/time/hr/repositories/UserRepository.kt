@@ -5,13 +5,15 @@
  *
  */
 
-package me.time.repositories
+package me.time.hr.repositories
 
-import me.time.entities.User
+import me.time.hr.entities.User
 import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
 
 /**
  * User entity JPA repository interface
  * @author obinna.asuzu
  */
-interface UserRepository : JpaRepository<User?, Long?>
+@Repository
+interface UserRepository : JpaRepository<User, Long>

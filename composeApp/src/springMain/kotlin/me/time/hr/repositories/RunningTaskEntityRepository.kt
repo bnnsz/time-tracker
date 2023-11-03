@@ -7,13 +7,12 @@
 
 package me.time.repositories
 
-import me.time.entities.Task
+import me.time.hr.entities.RuningTask
 import org.springframework.data.jpa.repository.JpaRepository
 
 /**
- * Task entity JPA repository interface
+ * Running task entity JPA repository interface
+ *
  * @author obinna.asuzu
  */
-interface TaskRepository : JpaRepository<Task?, Long?> {
-    fun findByOrganisationIdAndProjectCode(organisationId: String?, projectCode: String?): List<Task?>?
-}
+interface RunningTaskEntityRepository : JpaRepository<RuningTask?, Long?>

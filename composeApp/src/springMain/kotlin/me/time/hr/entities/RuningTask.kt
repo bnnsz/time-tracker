@@ -3,9 +3,13 @@
  * This file is subject to the terms and conditions of the MIT License.
  * See the file "LICENSE" for details.
  */
-package me.time.entities
+package me.time.hr.entities
 
-import jakarta.persistence.*
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.Temporal
+import jakarta.persistence.TemporalType
+import me.time.common.entities.BaseEntity
 import java.io.Serializable
 import java.util.*
 
@@ -28,9 +32,6 @@ class RuningTask() : BaseEntity(), Serializable {
 
     @Column
     private val projectCode: String? = null
-
-    @Column
-    private val organisationId: String? = null
 
     @Column
     @Temporal(TemporalType.TIMESTAMP)

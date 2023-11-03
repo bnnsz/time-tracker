@@ -5,15 +5,13 @@
  *
  */
 
-package me.time.repositories
+package me.time.tracker.repositories
 
-import me.time.entities.Project
+import me.time.common.entities.Setting
 import org.springframework.data.jpa.repository.JpaRepository
 
 /**
- * Project entity JPA repository interface
+ * Setting entity JPA repository interface
  * @author obinna.asuzu
  */
-interface ProjectRepository : JpaRepository<Project?, Long?> {
-    fun findByOrganisationId(organisationId: String?): List<Project?>?
-}
+interface SettingRepository : JpaRepository<Setting, String>
